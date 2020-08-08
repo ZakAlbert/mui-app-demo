@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "@layout": ["layout"],
+      "@pages": ["pages"],
+      "@components": ["components"],
+      "@theme": ["theme"],
+      "@theme/scheme": ["theme/schemeBuilder"]
+    }
+  }
+}
