@@ -9,8 +9,8 @@ scheme.configureHeader(builder => {
 });
 scheme.configureHeader(builder => {
   builder.create("secondaryBar")
-    .registerConfig("xs", {
-      position: "sticky"
+    .registerConfig('xs', {
+      position: 'sticky',
     })
 });
 

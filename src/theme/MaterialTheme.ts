@@ -9,6 +9,11 @@ const themeLightConfig: ThemeOptions = {
     primary: {
       main: '#fff'
     }
+  },
+  mixins: {
+    toolbar: {
+      minHeight: 48
+    }
   }
 };
 const themeDarkConfig: ThemeOptions = {
@@ -18,7 +23,11 @@ const themeDarkConfig: ThemeOptions = {
       main: '#212121'
     }
   },
-
+  mixins: {
+    toolbar: {
+      minHeight: 48
+    }
+  }
 };
 
 export const ThemeDarkConfig = themeDarkConfig;
