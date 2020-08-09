@@ -5,6 +5,7 @@
     "no-empty": false,
     "jsx-no-lambda": false,
     "jsx-boolean-value": false,
-    "no-implicit-dependencies": false
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": false
   }
 }

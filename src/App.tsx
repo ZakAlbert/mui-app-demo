@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core';
-import { ThemeLightConfig } from '@theme';
-import { MainLayout } from '@layout';
+import { ThemeLightConfig } from 'theme';
+import { MainLayout } from 'layout';
 // import logo from './logo.svg';
 
 const App: FC = () => {

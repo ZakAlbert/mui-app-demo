@@ -1,6 +1,7 @@
 {
-  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
+    "rootDir": "./src",
+    "baseUrl": "./src",
     "target": "es5",
     "lib": [
       "dom",
@@ -21,6 +22,7 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src",
+    "config-overrides.js"
   ]
 }
