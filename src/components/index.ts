@@ -1,2 +1,3 @@
-export { default as ContentWrapper } from './ContentWrapper/ContentWrapper';
-export { default as AppHeader } from './AppHeader/AppHeader';
+export { default as ContentWrapper } from './ContentWrapper';
+export { default as AppHeader } from './AppHeader'
+export { default as Search } from './Search';

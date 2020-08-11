@@ -8,9 +8,11 @@ const useHeaderStyles = makeStyles((theme: Theme) => createStyles({
     borderBottomColor: theme.palette.divider,
     zIndex: 0
   },
-  containerNoBorder: {
-    zIndex: 0,
-    borderBottomColor: 'transparent',
+  bottomBorder: {
+    borderBottomStyle: "solid",
+    borderBottomWidth: "1px",
+    borderBottomColor: theme.palette.divider,
+
   },
   title: {
     fontSize: '14px',

@@ -2,15 +2,14 @@ import React, { FC } from 'react';
 import { MainLayoutScheme } from 'theme/schemeBuilder';
 import { Root } from '@mui-treasury/layout';
 import { ContentWrapper, AppHeader } from 'components';
-import { HomePage } from 'pages';
-
+import { Home } from 'pages';
 
 const MainLayout: FC = () => {
   return (
     <Root scheme={MainLayoutScheme} themeProviderOmitted>
-      <AppHeader />
+      <AppHeader title="React" subtitle="Awesome" />
       <ContentWrapper>
-        <HomePage />
+        <Home />
       </ContentWrapper>
     </Root>
   );

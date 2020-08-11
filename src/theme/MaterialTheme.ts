@@ -8,7 +8,7 @@ const themeLightConfig: ThemeOptions = {
     },
     primary: {
       main: '#fff'
-    }
+    },
   },
   mixins: {
     toolbar: {

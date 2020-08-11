@@ -11,10 +11,14 @@ import {
 const Header = getHeader(styled);
 
 interface IAppHeader {
+  title?: string,
+  subtitle?: string,
   window?: () => Window;
 };
 
-const AppHeader: FC<IAppHeader> = ({ window }) => {
+const AppHeader: FC<IAppHeader> = (props) => {
+
+  const { window, title, subtitle } = props;
 
   const classes = useHeaderStyles();
   const isScroll = useScrollTrigger({
@@ -25,17 +29,17 @@ const AppHeader: FC<IAppHeader> = ({ window }) => {
   const urlAvatar = "https://firebasestorage.googleapis.com/v0/b/angular-zak94.appspot.com/o/Storage%2Fpefil.jpg?alt=media&token=c47e9f9f-52e5-4ff9-99b8-d9b87edcff0d";
   return (
     <>
-      <Header color="primary" elevation={0}>
+      <Header color="primary" elevation={0} className={isScroll ? classes.bottomBorder : ''} >
         <Toolbar>
           <Grid container spacing={1} alignItems="center">
             <Grid item>
               <Breadcrumbs separator={<NavigateNextIcon color="inherit" fontSize="small" />}>
                 <Typography color="inherit" variant="h6" className={classes.title}>
-                  Project Manager
+                  {title}
                 </Typography>
                 {isScroll &&
                   <Fade in={isScroll} mountOnEnter unmountOnExit >
-                    <Typography className={classes.title} color="textPrimary" variant="h6"> Authentication </Typography>
+                    <Typography className={classes.title} color="textPrimary" variant="h6"> {subtitle} </Typography>
                   </Fade>
                 }
               </Breadcrumbs>
@@ -61,21 +65,23 @@ const AppHeader: FC<IAppHeader> = ({ window }) => {
           </Grid>
         </Toolbar>
       </Header>
-      <Header
-        id="secondHeader"
-        component="div"
-        color="primary" elevation={0}
-        className={classes.containerBorder}>
-        <Toolbar>
-          <Grid container spacing={1} alignItems="center">
-            <Grid item xs>
-              <Typography color="inherit" variant="h5" component="h1">
-                Authentication
-              </Typography>
+      {subtitle &&
+        <Header
+          id="secondHeader"
+          component="div"
+          color="primary" elevation={0}
+          className={classes.containerBorder}>
+          <Toolbar>
+            <Grid container spacing={1} alignItems="center">
+              <Grid item xs>
+                <Typography color="inherit" variant="h5" component="h1">
+                  {subtitle}
+                </Typography>
+              </Grid>
             </Grid>
-          </Grid>
-        </Toolbar>
-      </Header>
+          </Toolbar>
+        </Header>
+      }
     </>
   );
 };
