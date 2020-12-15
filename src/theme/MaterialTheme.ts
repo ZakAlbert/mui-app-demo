@@ -3,9 +3,9 @@ import { ThemeOptions } from '@material-ui/core';
 const themeLightConfig: ThemeOptions = {
   palette: {
     type: 'light',
-    background: {
+    /*  background: {
       default: '#fff'
-    },
+     }, */
     primary: {
       main: '#fff'
     },
